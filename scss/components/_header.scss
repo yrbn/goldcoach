@@ -1,0 +1,123 @@
+.main-menu {
+    background: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0;
+
+    @media (min-width: $screen-tablet) {
+    margin-top: 20px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .30);
+	}
+}
+
+.main-menu_mobbutton {
+    margin-top: 18px;
+    border: none;
+}
+
+.main-menu .navbar-toggle:focus, 
+.main-menu .navbar-toggle:hover {
+    background-color: #fff;
+}
+
+.main-menu .navbar-toggle .icon-bar {
+    background-color: #ff6200;
+    height: 5px;
+    width: 25px;
+    border-radius: 2px;
+}
+
+.navbar-brand {
+    height: auto;
+    padding: 0 15px;
+
+	.logo-desktop {
+	    display: none;
+
+	    @media (min-width: $screen-desktop) {
+	    display: block;
+		}
+	}
+
+	.logo-mob {
+	    display: block;
+
+	    @media (min-width: $screen-desktop) {
+	    display: none;
+		}
+	}
+}
+
+/* img {
+    max-width: 100%;
+    height: auto;
+} */
+
+.main-menu_tel {
+    border-left: 1px solid #e5e5e5;
+    height: 75px;
+    padding: 11px 0 0 18px;
+    display: none;
+
+    @media (min-width: $screen-desktop){
+    display: block;
+	}
+	
+	li {
+	    float: none;
+	    font-weight: normal;
+	    font-size: 13px;
+	    text-align: justify;
+	}
+	
+	img {
+	    padding-right: 8px;
+	    padding-bottom: 3px;
+	}
+
+	span {
+	    font-size: 11px;
+	    color: #676767;
+	    text-transform: none;
+	}
+}
+
+
+.main-menu_navigation {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    li {
+	    border-bottom: 1px solid #d6d6d6;
+
+	    @media (min-width: $screen-tablet) {
+	    	border-bottom: none;
+		}
+        
+        a {
+            background-color: #e6e6e6;
+            padding: 14px 15px;
+
+            @media (min-width: $screen-tablet) {
+            background-color: transparent;
+            padding: 3px 3px;
+            margin: 23px 30px 0 0;
+            }
+        }
+	}
+}
+
+.main-menu .navbar-nav .active-link a, 
+.main-menu .navbar-nav li a:focus, 
+.main-menu .navbar-nav li a:hover {
+    color: #ff6200;
+    border-bottom: none;
+    background-color: #e6e6e6;
+
+    @media (min-width: $screen-tablet) {
+    border-bottom: 2px solid #ff6200;
+    background-color: transparent;
+	}
+}
