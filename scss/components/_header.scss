@@ -1,5 +1,5 @@
 .main-menu {
-    background: #fff;
+    background: $main-color-white;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
@@ -19,14 +19,18 @@
 
 .main-menu .navbar-toggle:focus, 
 .main-menu .navbar-toggle:hover {
-    background-color: #fff;
+    background-color: $main-color-white;
 }
 
 .main-menu .navbar-toggle .icon-bar {
-    background-color: #ff6200;
+    background-color: $main-color-orange;
     height: 5px;
     width: 25px;
     border-radius: 2px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
 }
 
 .navbar-brand {
@@ -49,11 +53,6 @@
 		}
 	}
 }
-
-/* img {
-    max-width: 100%;
-    height: auto;
-} */
 
 .main-menu_tel {
     border-left: 1px solid #e5e5e5;
@@ -112,12 +111,12 @@
 .main-menu .navbar-nav .active-link a, 
 .main-menu .navbar-nav li a:focus, 
 .main-menu .navbar-nav li a:hover {
-    color: #ff6200;
+    color: $main-color-orange;
     border-bottom: none;
     background-color: #e6e6e6;
 
     @media (min-width: $screen-tablet) {
-    border-bottom: 2px solid #ff6200;
+    border-bottom: 2px solid $main-color-orange;
     background-color: transparent;
 	}
 }

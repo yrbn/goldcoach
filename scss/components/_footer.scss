@@ -39,7 +39,7 @@ footer {
 
 .footer_section li {
     font-size: 14px;
-    color: #ff6200;
+    color: $main-color-orange;
     padding: 5px 0;
 
     a {
@@ -48,7 +48,7 @@ footer {
 
         &:focus, 
         &:hover {
-            color: #ff6200;
+            color: $main-color-orange;
             background-color: transparent;
         }
     }

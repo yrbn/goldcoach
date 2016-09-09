@@ -11,7 +11,7 @@
     "url": "git+https://github.com/yrbn/goldcoach.git"
   },
   "author": "Yuriy Rybin",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yrbn/goldcoach/issues"
   },
@@ -31,5 +31,6 @@
     "lodash": "^4.13.1"
   },
   "dependencies": {
+    "bootstrap-sass": "^3.3.7"
   }
 }

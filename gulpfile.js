@@ -4,40 +4,17 @@ var gulp         = require('gulp'),
     sourcemaps   = require('gulp-sourcemaps'),
     autoprefixer = require('autoprefixer'),
     browser      = require('browser-sync'),
-    iconfont     = require('gulp-iconfont'),
     consolidate  = require('gulp-consolidate');
 
 gulp.task('sass', function () {
   return gulp.src('scss/**/*.scss')
         .pipe(sourcemaps.init())
+        .pipe(sass({includePaths: ['./node_modules/bootstrap-sass/assets/stylesheets']})
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./css'))
         .pipe(browser.stream({match: '**/*.css'}));
-});
-
-// Font generator
-gulp.task("build:icons", function() {
-    return gulp.src(["./icons/*.svg"]) //path to svg icons
-      .pipe(iconfont({
-        fontName: "iconsfont", 
-        formats: ["ttf", "eot", "woff", "svg"],
-        centerHorizontally: true,
-        fixedWidth: true,
-        normalize: true
-      }))
-      .on("glyphs", (glyphs) => {
-
-        gulp.src("./icons/util/*.scss") // Template for scss files
-            .pipe(consolidate("lodash", {
-                glyphs: glyphs,
-                fontName: "iconsfont",
-                fontPath: "../fonts/"
-            }))
-            .pipe(gulp.dest("./scss/icons")); //generated scss files with classes
-      })
-      .pipe(gulp.dest("./fonts/")); //icon font destination
 });
 
 // Starts a BrowerSync instance

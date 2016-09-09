@@ -1,25 +1,137 @@
 
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "./scss/components/variables";
+@import "./scss/components/bootstrap-custom";
 @import "./scss/components/header";
 @import "./scss/components/footer";
 
 body {
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
-    color: #000000;
+    color: #000;
     word-wrap: break-word;
     background: #f5f5f5;
 }
 
+/* img {
+    max-width: 100%;
+    height: auto;
+} */
 
 
 .main {
     h1 {
-        margin-right: 350px;
         font-size: 36px;
         text-transform: uppercase;
     }
+
+    a {
+        color: $main-color-orange;
+    }
+
+    p {
+        margin-top: 35px;
+    }
+
+    .main_share {
+        font-weight: bold;
+    }
 }
+
+article {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.main_specification {
+    margin: 25px 0 20px;
+}
+
+.btn.round {
+    border-radius: 30px;
+    background: $main-color-white;
+    box-shadow: 0 2px 1px black;
+    outline: none;
+
+    .fa {
+        color: $main-color-orange;
+    }
+
+    &:hover {
+        background: #f3f3f3;
+
+        .fa {
+            color: #000;
+        }
+    }
+
+    &:active {
+        transform: translateY(1px);
+        outline: none;
+    }
+}
+
+.main_review-date {
+    color: #6b6b6b;
+}
+
+.main_review-author {
+    color: $main-color-orange;
+    font-weight: bold;
+}
+
+.main_photo {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 15px;
+
+    @media (min-width: $screen-phone) {
+        float: left;
+        padding-right: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+.btn-vk,
+.btn-twitter,
+.btn-facebook {
+    width: 55px;
+    padding: 5px;
+    color: #fff !important;
+    font-size: 12px;
+    margin-left: 7px;
+    margin-bottom: 25px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    .fa {
+        font-size: 16px;
+    }
+}
+
+.btn-vk {
+    background: #4d76a1;
+}
+
+.btn-twitter {
+    background-color: #55acee;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+}
+
+.image {
+    display: block;
+    margin: 30px auto;
+}
+
 
 
 
