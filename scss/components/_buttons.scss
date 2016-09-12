@@ -1,0 +1,34 @@
+.btn-vk,
+.btn-twitter,
+.btn-facebook {
+    width: 55px;
+    padding: 5px;
+    color: #fff !important;
+    font-size: 12px;
+    margin-left: 7px;
+    margin-bottom: 25px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    .fa {
+        font-size: 16px;
+    }
+}
+
+.btn-vk {
+    background: #4d76a1;
+}
+
+.btn-twitter {
+    background-color: #55acee;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+}

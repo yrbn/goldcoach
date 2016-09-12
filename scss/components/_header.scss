@@ -10,23 +10,25 @@
     margin-top: 20px;
     box-shadow: 0 0 1px rgba(0, 0, 0, .30);
 	}
+
+    .navbar-toggle {
+        .icon-bar {
+            background-color: $main-color-orange;
+            height: 5px;
+            width: 25px;
+            border-radius: 2px;
+        }
+
+        &:focus, 
+        &:hover {
+            background-color: $main-color-white;
+        }
+    }
 }
 
 .main-menu_mobbutton {
     margin-top: 18px;
     border: none;
-}
-
-.main-menu .navbar-toggle:focus, 
-.main-menu .navbar-toggle:hover {
-    background-color: $main-color-white;
-}
-
-.main-menu .navbar-toggle .icon-bar {
-    background-color: $main-color-orange;
-    height: 5px;
-    width: 25px;
-    border-radius: 2px;
 }
 
 .navbar-default .navbar-nav > li > a {

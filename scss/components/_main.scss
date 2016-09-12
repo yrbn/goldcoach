@@ -1,0 +1,77 @@
+.main {
+    h1 {
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: $main-color-orange;
+    }
+
+    p {
+        margin-top: 35px;
+    }
+
+    .main_share {
+        font-weight: bold;
+    }
+}
+
+article {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.main_specification {
+    margin: 25px 0 20px;
+}
+
+.btn.round {
+    border-radius: 30px;
+    background: $main-color-white;
+    box-shadow: 0 2px 1px black;
+    outline: none;
+
+    .fa {
+        color: $main-color-orange;
+    }
+
+    &:hover {
+        background: #f3f3f3;
+
+        .fa {
+            color: #000;
+        }
+    }
+
+    &:active {
+        transform: translateY(1px);
+        outline: none;
+    }
+}
+
+.main_review-date {
+    color: #6b6b6b;
+}
+
+.main_review-author {
+    color: $main-color-orange;
+    font-weight: bold;
+}
+
+.main_photo {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 15px;
+
+    @media (min-width: $screen-phone) {
+        float: left;
+        padding-right: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+.main_image {
+    display: block;
+    margin: 30px auto;
+}

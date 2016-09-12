@@ -9,8 +9,9 @@ var gulp         = require('gulp'),
 gulp.task('sass', function () {
   return gulp.src('scss/**/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({includePaths: ['./node_modules/bootstrap-sass/assets/stylesheets']})
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+          includePaths: ['./../node_modules/bootstrap-sass/assets/stylesheets'
+          ]}).on('error', sass.logError))
         .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./css'))
